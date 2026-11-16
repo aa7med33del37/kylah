@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>كيلة | محمصة القهوة المختصة</title>
+<meta name="description" content="محمصة كيلة للقهوة المختصة. قهوة طازجة وأدوات تحضير.">
+<link rel="icon" href="assets/logo.png">
+<link rel="stylesheet" href="assets/kylah-raed.css">
+<style>
+/* =====================================================================
+   Preview only: the base layout Salla's Raed stylesheet gives its own
+   header, features, products slider and footer. Not shipped to Salla.
+   The Kylah look itself is assets/kylah-raed.css + the HTML blocks.
+   ===================================================================== */
+*{box-sizing:border-box;margin:0;padding:0}
+html{overflow-x:clip;scroll-behavior:smooth}
+body{color:#14110f;line-height:1.7;overflow-x:hidden}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button,input{font:inherit;color:inherit;border:0;background:none}
+button{cursor:pointer}
+:focus-visible{outline:2px solid #e8562a;outline-offset:3px}
+.container{width:min(1280px,100% - 40px);margin-inline:auto}
+.store-header{display:contents}
+.top-navbar{display:flex;font-size:.8rem;padding-block:4px}
+.top-navbar .container{display:flex;justify-content:space-between;align-items:center;gap:16px}
+.tn-start{flex:1;display:flex;align-items:center;gap:8px}
+.topnav-link-item{display:inline-block;padding:1px 16px;line-height:1;border-inline-start:1px solid}
+.tn-links .topnav-link-item:first-child{padding-inline-start:0;border:0}
+.header-search{flex:1;max-width:420px}
+.s-search-input{width:100%;height:32px;padding:0 16px;outline:0}
+.main-nav-container{position:sticky;top:0;z-index:50;display:flex;align-items:center;min-height:84px}
+.main-nav-container .inner{width:100%}
+.mn-row{display:flex;align-items:stretch;justify-content:space-between}
+.mn-start,.mn-end{display:flex;align-items:center;gap:8px}
+.navbar-brand img{height:52px;width:auto}
+.mburger{display:none}
+.main-menu{list-style:none;display:flex;align-items:center;margin:0 28px}
+.main-menu li{position:relative}
+.main-menu li.root-level>a{display:flex;align-items:center;padding:30px 14px;font-size:.98rem}
+.main-menu .has-children>a::after{content:"";width:6px;height:6px;border:solid currentColor;border-width:0 2px 2px 0;transform:rotate(45deg) translateY(-2px);margin-inline-start:8px}
+.main-menu .sub-menu{position:absolute;top:100%;right:0;width:220px;opacity:0;visibility:hidden;transform:translateY(-8px);transition:.3s;z-index:20}
+.main-menu .has-children:hover .sub-menu{opacity:1;visibility:visible;transform:none}
+.main-menu .sub-menu ul{list-style:none;padding:8px 0}
+.main-menu .sub-menu a{display:block;padding:10px 22px;font-size:.92rem}
+.hdr-btn{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;position:relative}
+.hdr-btn svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.s-cart-summary-count{position:absolute;top:-5px;inset-inline-end:-5px;min-width:20px;height:20px;border-radius:10px;font:700 .68rem/20px "Alexandria",sans-serif;text-align:center}
+.cart-total{font-size:.9rem;font-weight:700;margin-inline-start:4px}
+.s-block{margin-block:60px}
+.s-block--features{margin-top:56px}
+.s-block--features>div{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.s-block--features .feature-icon{border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:12px}
+.s-block--features .feature-icon i svg{width:28px;height:28px;stroke:currentColor;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.s-slider-block__title{display:flex;justify-content:space-between;align-items:end;gap:16px;margin-bottom:26px}
+.s-slider-block__title-left{display:flex;align-items:center;gap:16px}
+.s-slider-block__title-nav{display:flex;gap:8px}
+.s-slider-block__title-nav button{width:44px;height:44px;border-radius:50%;display:grid;place-items:center}
+.s-slider-block__title-nav svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:2}
+.rail{display:grid;grid-auto-flow:column;grid-auto-columns:calc((100% - 66px)/4);gap:22px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 2px 22px;scrollbar-width:none}
+.rail::-webkit-scrollbar{display:none}
+.s-product-card-entry{scroll-snap-align:start;display:flex;flex-direction:column;height:100%;position:relative}
+.s-product-card-image{position:relative;overflow:hidden;width:100%}
+.s-product-card-wishlist-btn{position:absolute;left:12px;z-index:2}
+.s-product-card-wishlist-btn button{display:grid;place-items:center}
+.s-product-card-wishlist-btn svg{width:17px;height:17px;stroke:currentColor;fill:none;stroke-width:1.8}
+.s-product-card-promotion-title{position:absolute;right:0;z-index:2;font-size:.74rem;line-height:1}
+.s-product-card-content{display:flex;flex-direction:column;flex:1}
+.s-product-card-content-sub{display:flex;align-items:baseline;gap:10px}
+.s-product-card-sale-price{display:flex;gap:8px;align-items:baseline}
+.s-product-card-sale-price span{text-decoration:line-through;font-size:.85rem}
+.s-product-card-content-footer{margin-top:auto;display:flex}
+salla-add-product-button{display:block;width:100%}
+salla-add-product-button button{width:100%;display:flex;align-items:center;justify-content:center;gap:8px}
+salla-add-product-button svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:1.8}
+.store-footer{margin-top:20px}
+.store-footer__inner{padding:64px 0 40px}
+.store-footer__inner .container{display:grid;grid-template-columns:2fr 1fr 1fr 1.3fr;gap:40px}
+.store-footer h3{font-size:1.05rem;margin-bottom:14px}
+.store-footer ul{list-style:none;display:grid;gap:8px;font-size:.94rem}
+.store-footer p{font-size:.94rem;line-height:1.9;max-width:28em}
+.f-logo{height:60px;width:auto;filter:invert(1) sepia(.15);margin-bottom:16px}
+.f-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;padding:18px 0;border-top:1px solid rgba(255,255,255,.12)}
+.pay{display:flex;gap:8px;flex-wrap:wrap}
+.pay span{font-size:.72rem;padding:4px 10px;border-radius:8px;background:rgba(255,255,255,.08)}
+@media (max-width:1023px){
+  .main-menu,.tn-links,.tn-contact{display:none}
+  .mburger{display:grid;place-items:center;width:42px;height:42px}
+  .mburger svg{width:26px;height:26px;stroke:currentColor;fill:none;stroke-width:2}
+  .rail{grid-auto-columns:calc((100% - 44px)/3)}
+  .store-footer__inner .container{grid-template-columns:1fr 1fr}
+}
+@media (max-width:720px){
+  .main-nav-container{min-height:70px}.navbar-brand img{height:40px}.cart-total{display:none}.header-search{max-width:none}
+  .s-block{margin-block:44px}
+  .s-block--features>div{grid-template-columns:repeat(2,1fr);gap:12px}
+  .rail{grid-auto-columns:calc((100% - 12px)/2);gap:12px}
+  .s-slider-block__title-nav{display:none}
+  .store-footer__inner .container{grid-template-columns:minmax(0,1fr);gap:28px}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.400 3.600-7 8-7s8 2.600 8 7"/></symbol>
+  <symbol id="i-bag" viewBox="0 0 24 24"><path d="M5 8h14l-1.200 11H6.200z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></symbol>
+  <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 20s-7-4.400-7-10a4 4 0 0 1 7-2.500A4 4 0 0 1 19 10c0 5.600-7 10-7 10z"/></symbol>
+</svg>
+
+<!-- ============ هيدر رائد (يتنسّق من kylah-raed.css) ============ -->
+<header class="store-header">
+  <div class="top-navbar"><div class="container">
+    <div class="tn-start">
+      <nav class="tn-links" aria-label="روابط"><a class="topnav-link-item" href="#">من نحن</a><a class="topnav-link-item" href="#">سياسة الاستبدال</a><a class="topnav-link-item" href="#">تواصل معنا</a></nav>
+      <div class="header-search"><input class="s-search-input" type="search" placeholder="ابحث عن قهوتك" aria-label="ابحث"></div>
+    </div>
+  </div></div>
+  <div class="main-nav-container"><div class="inner"><div class="container"><div class="mn-row">
+    <div class="mn-start">
+      <a class="mburger" href="#" aria-label="القائمة"><svg viewBox="0 0 24 24"><path d="M4 8h16M4 16h10"/></svg></a>
+      <a class="navbar-brand" href="#"><img src="assets/logo.png" alt="كيلة"></a>
+      <custom-main-menu><nav><ul class="main-menu">
+        <li class="root-level"><a href="#"><span>قهوة مختصة</span></a></li>
+        <li class="root-level"><a href="#"><span>إسبريسو</span></a></li>
+        <li class="root-level has-children"><a href="#"><span>أدوات التحضير</span></a>
+          <div class="sub-menu"><ul><li><a href="#">V60</a></li><li><a href="#">كيمكس</a></li><li><a href="#">فلاتر</a></li><li><a href="#">أباريق ستانلس</a></li></ul></div></li>
+        <li class="root-level"><a href="/offers"><span>العروض</span></a></li>
+      </ul></nav></custom-main-menu>
+    </div>
+    <div class="mn-end">
+      <salla-user-menu><button class="hdr-btn" aria-label="حسابي"><svg viewBox="0 0 24 24"><use href="#i-user"/></svg></button></salla-user-menu>
+      <salla-cart-summary><button class="hdr-btn" aria-label="السلة"><svg viewBox="0 0 24 24"><use href="#i-bag"/></svg><span class="s-cart-summary-count">٢</span></button></salla-cart-summary>
+      <span class="cart-total">١٢٠ ر.س</span>
+    </div>
+  </div></div></div></div>
+</header>
+
+<main>
+<!-- ============ بلوك HTML في سلة: kylah-hero.html ============ -->
+<!-- =====================================================================
+     كيلة | Hero (full screen width) + ticker
+     Paste into a Salla custom HTML block at the very top of the home page.
+     Images: each slide has one square photo shown inside the big circle.
+     Replace assets/hero-1.jpg ... hero-3.jpg with their Salla links, and each
+     href="#" with the real category link. With an empty src the circle shows
+     a drawn bean pattern, so nothing ever looks broken.
+     ===================================================================== -->
+<section class="kyl-hero" aria-label="كيلة">
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;700;800;900&family=Space+Mono:wght@400;700&display=swap");
+.kyl-hero{--char:#14110f;--cream:#f3ece0;--ember:#e8562a;--latte:#c9a27e;--bean:#3b2418;
+  --vw:var(--kyl-vw,100vw);--gut:max(24px,calc((var(--vw) - 1280px)/2 + 20px));
+  position:relative;direction:rtl;font-family:"Alexandria","Segoe UI",Tahoma,sans-serif;color:var(--cream);
+  width:var(--vw);margin:0;margin-inline:calc(50% - var(--vw)/2);padding:0}
+.kyl-hero *{box-sizing:border-box;margin:0;padding:0}
+.kyl-stage{position:relative;overflow:hidden;isolation:isolate;background:var(--char)}
+/* film grain */
+.kyl-stage::after{content:"";position:absolute;inset:0;z-index:3;pointer-events:none;opacity:.12;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E")}
+/* the brand word, huge and outlined, drifting behind everything */
+.kyl-word{position:absolute;z-index:0;top:50%;left:0;translate:0 -50%;white-space:nowrap;font-weight:900;font-size:clamp(14rem,30vw,30rem);line-height:1;
+  color:transparent;-webkit-text-stroke:1.5px rgba(243,236,224,.09);pointer-events:none;animation:kylDrift 40s linear infinite alternate}
+@keyframes kylDrift{from{transform:translateX(-12%)}to{transform:translateX(12%)}}
+.kyl-track{position:relative;z-index:1;display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none}
+.kyl-track::-webkit-scrollbar{display:none}
+.kyl-slide{flex:0 0 100%;scroll-snap-align:start;min-height:clamp(600px,50vw,760px);display:grid;grid-template-columns:1fr 1fr;align-items:center;
+  padding:60px var(--gut) 120px;gap:40px}
+/* --- text --- */
+.kyl-txt{display:grid;gap:20px;justify-items:start;max-width:560px}
+.kyl-eye{font-family:"Space Mono",monospace;font-size:.78rem;letter-spacing:.18em;color:var(--latte);direction:ltr;display:flex;gap:10px;align-items:center}
+.kyl-eye::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--ember);box-shadow:0 0 0 4px rgba(232,86,42,.25)}
+.kyl-txt h2{font-weight:900;font-size:clamp(2.6rem,5.4vw,5rem);line-height:1.15;letter-spacing:-.01em;color:var(--cream)}
+.kyl-txt h2 em{font-style:normal;color:var(--ember);display:block}
+.kyl-txt p{font-weight:300;font-size:1.12rem;line-height:1.9;color:#cfc4b4;max-width:30em}
+.kyl-cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:6px}
+.kyl-btn{display:inline-flex;align-items:center;gap:12px;padding:15px 30px;border-radius:99px;font-weight:700;font-size:.98rem;text-decoration:none;transition:.3s;white-space:nowrap}
+.kyl-btn svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:2;transition:transform .3s}
+.kyl-btn:hover svg{transform:translateX(-6px)}
+.kyl-ember{background:var(--ember);color:#fff !important;box-shadow:0 14px 34px -12px rgba(232,86,42,.8)}
+.kyl-ember:hover{background:#ff6b3c;transform:translateY(-3px)}
+.kyl-ghost{border:2px solid rgba(243,236,224,.35);color:var(--cream) !important}
+.kyl-ghost:hover{border-color:var(--cream);background:var(--cream);color:var(--char) !important}
+/* --- visual: the logo's dot as a giant circle --- */
+.kyl-vis{position:relative;justify-self:center;width:min(520px,38vw);aspect-ratio:1}
+.kyl-glow{position:absolute;inset:-18%;border-radius:50%;background:radial-gradient(closest-side,rgba(232,86,42,.45),rgba(232,86,42,0));animation:kylPulse 5s ease-in-out infinite}
+@keyframes kylPulse{50%{transform:scale(1.08);opacity:.7}}
+.kyl-orb{position:absolute;inset:9%;border-radius:50%;overflow:hidden;box-shadow:0 40px 80px -30px rgba(0,0,0,.8),inset 0 0 0 2px rgba(243,236,224,.15);
+  background:radial-gradient(circle at 35% 30%,#5a3624,#2a170f 70%);}
+.kyl-orb::before{content:"";position:absolute;inset:0;opacity:.55;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='90' height='90' viewBox='0 0 90 90'%3E%3Cg fill='%23140c08'%3E%3Cellipse cx='22' cy='24' rx='13' ry='18' transform='rotate(-30 22 24)'/%3E%3Cellipse cx='66' cy='62' rx='13' ry='18' transform='rotate(25 66 62)'/%3E%3C/g%3E%3Cg stroke='%23c9a27e' stroke-width='2' fill='none' opacity='.5'%3E%3Cpath d='M15 13c10 6 6 16 14 22' /%3E%3Cpath d='M60 50c10 4 3 16 13 24'/%3E%3C/g%3E%3C/svg%3E");background-size:90px}
+.kyl-orb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.08);transition:transform 7s ease-out}
+.kyl-orb img[src=""]{display:none}
+.kyl-slide.is-on .kyl-orb img{transform:scale(1.18)}
+.kyl-ring{direction:ltr;position:absolute;inset:0;width:100%;height:100%;animation:kylSpin 26s linear infinite;overflow:visible}
+.kyl-ring text{font-family:"Space Mono",monospace;font-size:5.2px;fill:var(--cream);font-weight:700}
+@keyframes kylSpin{to{transform:rotate(360deg)}}
+.kyl-dot{position:absolute;width:13%;aspect-ratio:1;border-radius:50%;background:var(--ember);bottom:6%;left:6%;box-shadow:0 10px 30px -6px rgba(232,86,42,.9);animation:kylBob 4s ease-in-out infinite}
+.kyl-dot+.kyl-dot{width:8%;left:20%;bottom:1%;background:var(--cream);animation-delay:-1.4s}
+@keyframes kylBob{50%{transform:translateY(-12px)}}
+/* steam */
+.kyl-steam{position:absolute;left:50%;top:-14%;width:30%;translate:-50% 0;overflow:visible}
+.kyl-steam path{fill:none;stroke:rgba(243,236,224,.5);stroke-width:2.2;stroke-linecap:round;stroke-dasharray:60;stroke-dashoffset:60;animation:kylSteam 4.2s ease-in-out infinite}
+.kyl-steam path:nth-child(2){animation-delay:1.3s}.kyl-steam path:nth-child(3){animation-delay:2.6s}
+@keyframes kylSteam{0%{stroke-dashoffset:60;opacity:0;transform:translateY(14px)}35%{opacity:1}100%{stroke-dashoffset:-60;opacity:0;transform:translateY(-16px)}}
+/* text arrives on the active slide */
+.kyl-txt>*{transition:transform .8s cubic-bezier(.2,.8,.2,1),opacity .8s}
+.kyl-js .kyl-slide:not(.is-on) .kyl-txt>*{opacity:0;transform:translateY(26px)}
+.kyl-txt>*:nth-child(2){transition-delay:.08s}.kyl-txt>*:nth-child(3){transition-delay:.16s}.kyl-txt>*:nth-child(4){transition-delay:.24s}
+/* --- controls --- */
+.kyl-ctrl{position:absolute;z-index:4;bottom:40px;right:var(--gut);display:flex;align-items:center;gap:16px;direction:ltr;font-family:"Space Mono",monospace;font-size:.82rem;color:#a99d8e}
+.kyl-ctrl b{color:var(--cream)}
+.kyl-ctrl:not(.kyl-ready){display:none}
+.kyl-bars{display:flex;gap:8px}
+.kyl-bars button{width:12px;height:12px;border-radius:50%;border:2px solid rgba(243,236,224,.4);background:transparent;cursor:pointer;padding:0;transition:.4s}
+.kyl-bars button.is-on{width:42px;border-radius:99px;background:var(--ember);border-color:var(--ember)}
+.kyl-arr{width:46px;height:46px;border-radius:50%;border:2px solid rgba(243,236,224,.3);background:transparent;color:var(--cream);display:grid;place-items:center;cursor:pointer;transition:.3s}
+.kyl-arr:hover{background:var(--cream);color:var(--char);border-color:var(--cream)}
+.kyl-arr svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:2}
+/* --- ticker --- */
+.kyl-ticker{background:var(--ember);color:var(--char);overflow:hidden;direction:ltr;border-block:3px solid var(--char)}
+.kyl-ticker ul{display:flex;width:max-content;list-style:none;animation:kylRun 34s linear infinite}
+.kyl-ticker li{display:flex;align-items:center;gap:26px;padding:14px 13px;white-space:nowrap;font-weight:900;font-size:1.25rem;direction:rtl}
+.kyl-ticker li.m{font-family:"Space Mono",monospace;font-weight:700;font-size:1rem;letter-spacing:.12em;direction:ltr}
+.kyl-ticker li::after{content:"";width:14px;height:14px;border-radius:50%;background:var(--char)}
+@keyframes kylRun{to{transform:translateX(-50%)}}
+@media (max-width:860px){
+  .kyl-hero{--gut:22px}
+  .kyl-slide{grid-template-columns:1fr;min-height:0;padding:36px var(--gut) 110px;gap:22px;align-items:start}
+  .kyl-vis{order:-1;width:min(300px,78vw)}
+  .kyl-txt{justify-items:center;text-align:center;margin-inline:auto}
+  .kyl-txt h2{font-size:2.4rem}.kyl-txt p{font-size:1rem}
+  .kyl-ghost{display:none}
+  .kyl-word{font-size:14rem;top:30%}
+  .kyl-ctrl{right:0;left:0;justify-content:center;bottom:34px}.kyl-arr{display:none}
+  .kyl-ticker li{font-size:1.05rem;padding:11px 10px}
+}
+@media (prefers-reduced-motion:reduce){.kyl-hero *,.kyl-hero *::before,.kyl-hero *::after{animation:none !important;transition:none !important}.kyl-track{scroll-behavior:auto}}
+</style>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs><path id="kyl-c" d="M50 50m-46 0a46 46 0 1 1 92 0a46 46 0 1 1-92 0"/></defs>
+  <symbol id="kyl-arrow" viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"/></symbol>
+</svg>
+
+<div class="kyl-stage">
+  <div class="kyl-word" aria-hidden="true">كيلة كيلة</div>
+  <div class="kyl-track">
+    <article class="kyl-slide is-on">
+      <div class="kyl-txt">
+        <span class="kyl-eye">01 — FRESH ROAST</span>
+        <h2>كيلة ليست <em>مجرد محمصة</em></h2>
+        <p>من اختيار الحبة لين التعبئة، نهتم بكل خطوة عشان توصلك قهوة مختصة طازجة بسعر يناسبك.</p>
+        <div class="kyl-cta"><a class="kyl-btn kyl-ember" href="#">تسوّق القهوة <svg viewBox="0 0 24 24"><use href="#kyl-arrow"/></svg></a><a class="kyl-btn kyl-ghost" href="#">وش جديدنا؟</a></div>
+      </div>
+      <div class="kyl-vis" aria-hidden="true"><span class="kyl-glow"></span><div class="kyl-orb"><img src="assets/hero-1.jpg" alt=""></div>
+        <svg class="kyl-ring" viewBox="0 0 100 100"><text><textPath href="#kyl-c" textLength="286" lengthAdjust="spacing">FRESHLY ROASTED ● SPECIALTY COFFEE ● KYLAH ROASTERY ●</textPath></text></svg><svg class="kyl-steam" viewBox="0 0 60 50"><path d="M14 46c-6-8 6-12 0-20s6-12 0-20"/><path d="M30 46c-6-8 6-12 0-20s6-12 0-20"/><path d="M46 46c-6-8 6-12 0-20s6-12 0-20"/></svg><span class="kyl-dot"></span><span class="kyl-dot"></span></div>
+    </article>
+    <article class="kyl-slide">
+      <div class="kyl-txt">
+        <span class="kyl-eye">02 — ESPRESSO</span>
+        <h2>إسبريسو <em>يضبط يومك</em></h2>
+        <p>خلطات متوازنة، قوامها غني وطعمها يثبت حتى مع الحليب.</p>
+        <div class="kyl-cta"><a class="kyl-btn kyl-ember" href="#">تسوّق الإسبريسو <svg viewBox="0 0 24 24"><use href="#kyl-arrow"/></svg></a></div>
+      </div>
+      <div class="kyl-vis" aria-hidden="true"><span class="kyl-glow"></span><div class="kyl-orb"><img src="assets/hero-2.jpg" alt=""></div>
+        <svg class="kyl-ring" viewBox="0 0 100 100"><text><textPath href="#kyl-c" textLength="286" lengthAdjust="spacing">FRESHLY ROASTED ● SPECIALTY COFFEE ● KYLAH ROASTERY ●</textPath></text></svg><svg class="kyl-steam" viewBox="0 0 60 50"><path d="M14 46c-6-8 6-12 0-20s6-12 0-20"/><path d="M30 46c-6-8 6-12 0-20s6-12 0-20"/><path d="M46 46c-6-8 6-12 0-20s6-12 0-20"/></svg><span class="kyl-dot"></span><span class="kyl-dot"></span></div>
+    </article>
+    <article class="kyl-slide">
+      <div class="kyl-txt">
+        <span class="kyl-eye">03 — BREW AT HOME</span>
+        <h2>حضّرها <em>على مزاجك</em></h2>
+        <p>V60 وكيمكس وفلاتر وأباريق ستانلس. كل اللي تحتاجه لكوب مضبوط في البيت.</p>
+        <div class="kyl-cta"><a class="kyl-btn kyl-ember" href="#">أدوات التحضير <svg viewBox="0 0 24 24"><use href="#kyl-arrow"/></svg></a></div>
+      </div>
+      <div class="kyl-vis" aria-hidden="true"><span class="kyl-glow"></span><div class="kyl-orb"><img src="assets/hero-3.jpg" alt=""></div>
+        <svg class="kyl-ring" viewBox="0 0 100 100"><text><textPath href="#kyl-c" textLength="286" lengthAdjust="spacing">FRESHLY ROASTED ● SPECIALTY COFFEE ● KYLAH ROASTERY ●</textPath></text></svg><svg class="kyl-steam" viewBox="0 0 60 50"><path d="M14 46c-6-8 6-12 0-20s6-12 0-20"/><path d="M30 46c-6-8 6-12 0-20s6-12 0-20"/><path d="M46 46c-6-8 6-12 0-20s6-12 0-20"/></svg><span class="kyl-dot"></span><span class="kyl-dot"></span></div>
+    </article>
+  </div>
+  <div class="kyl-ctrl">
+    <button class="kyl-arr" data-d="1" aria-label="التالي"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
+    <span><b class="kyl-cur">01</b> / 03</span>
+    <div class="kyl-bars"><button class="is-on" aria-label="الشريحة 1"></button><button aria-label="الشريحة 2"></button><button aria-label="الشريحة 3"></button></div>
+    <button class="kyl-arr" data-d="-1" aria-label="السابق"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button>
+  </div>
+</div>
+<div class="kyl-ticker" aria-hidden="true"><ul>
+  <li>قهوة مختصة</li><li class="m">FRESHLY ROASTED</li><li>محمصة كيلة</li><li class="m">ESPRESSO</li><li>أدوات التحضير</li><li class="m">V60 · CHEMEX</li><li>طازجة كل مرة</li><li class="m">KYLAH ROASTERY</li>
+  <li>قهوة مختصة</li><li class="m">FRESHLY ROASTED</li><li>محمصة كيلة</li><li class="m">ESPRESSO</li><li>أدوات التحضير</li><li class="m">V60 · CHEMEX</li><li>طازجة كل مرة</li><li class="m">KYLAH ROASTERY</li>
+</ul></div>
+<script>
+(function(){
+  var root=document.currentScript&&document.currentScript.closest(".kyl-hero")||document.querySelector(".kyl-hero");
+  if(!root||root.dataset.ready)return;root.dataset.ready=1;
+  function fit(){root.style.setProperty("--kyl-vw",document.documentElement.clientWidth+"px")}fit();
+  var track=root.querySelector(".kyl-track"),slides=[].slice.call(root.querySelectorAll(".kyl-slide")),
+      dots=[].slice.call(root.querySelectorAll(".kyl-bars button")),cur=0,timer,hold=false,
+      still=matchMedia("(prefers-reduced-motion:reduce)").matches,rtl=getComputedStyle(track).direction==="rtl";
+  root.classList.add("kyl-js");root.querySelector(".kyl-ctrl").classList.add("kyl-ready");
+  function mark(i){cur=i;slides.forEach(function(s,k){s.classList.toggle("is-on",k===i)});dots.forEach(function(d,k){d.classList.toggle("is-on",k===i)});root.querySelector(".kyl-cur").textContent="0"+(i+1)}
+  function go(i){i=(i+slides.length)%slides.length;track.scrollTo({left:(rtl?-1:1)*i*track.clientWidth});mark(i)}
+  function auto(){clearInterval(timer);if(!still)timer=setInterval(function(){if(!hold)go(cur+1)},6500)}
+  dots.forEach(function(d,i){d.addEventListener("click",function(){go(i);auto()})});
+  [].forEach.call(root.querySelectorAll(".kyl-arr"),function(b){b.addEventListener("click",function(){go(cur+ +b.dataset.d);auto()})});
+  var t;track.addEventListener("scroll",function(){clearTimeout(t);t=setTimeout(function(){var i=Math.round(Math.abs(track.scrollLeft)/track.clientWidth);if(i!==cur){mark(i);auto()}},120)},{passive:true});
+  ["pointerenter","touchstart","focusin"].forEach(function(e){root.addEventListener(e,function(){hold=true},{passive:true})});
+  ["pointerleave","touchend","focusout"].forEach(function(e){root.addEventListener(e,function(){hold=false},{passive:true})});
+  addEventListener("resize",function(){fit();track.scrollTo({left:(rtl?-1:1)*cur*track.clientWidth,behavior:"instant"})});
+  auto();
+})();
+</script>
+</section>
+
+
+<!-- ============ مميزات المتجر (بلوك رائد) ============ -->
+<section class="s-block s-block--features container"><div>
+  <div class="s-block--features__item"><div class="feature-icon"><i><svg viewBox="0 0 24 24"><path d="M12 3c3 3 5 6 5 9a5 5 0 0 1-10 0c0-3 2-6 5-9z"/><path d="M12 17v-5"/></svg></i></div><h2>تحميص طازج</h2><p>نحمّص ونعبّي أول بأول</p></div>
+  <div class="s-block--features__item"><div class="feature-icon"><i><svg viewBox="0 0 24 24"><ellipse cx="12" cy="12" rx="6" ry="9" transform="rotate(-30 12 12)"/><path d="M8 6c4 3 2 9 7 12"/></svg></i></div><h2>حبوب مختصة</h2><p>محاصيل مختارة بعناية</p></div>
+  <div class="s-block--features__item"><div class="feature-icon"><i><svg viewBox="0 0 24 24"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7z"/><circle cx="7" cy="18" r="1.800"/><circle cx="17" cy="18" r="1.800"/></svg></i></div><h2>توصيل سريع</h2><p>لكل مدن المملكة</p></div>
+  <div class="s-block--features__item"><div class="feature-icon"><i><svg viewBox="0 0 24 24"><path d="M5 9h14v11H5z"/><path d="M9 9V7a3 3 0 0 1 6 0v2"/><circle cx="12" cy="14.500" r="1.500"/></svg></i></div><h2>دفع آمن</h2><p>مدى وفيزا وApple Pay</p></div>
+</div></section>
+
+<!-- ============ بلوك HTML في سلة: kylah-categories.html ============ -->
+<!-- =====================================================================
+     كيلة | Three category banners
+     Paste into a Salla custom HTML block under the store features.
+     Replace assets/cat-1.jpg ... cat-3.jpg (square photos, subject centred)
+     with their Salla links, and each href="#" with the category link.
+     ===================================================================== -->
+<section class="kyl-cats" aria-label="أقسام كيلة">
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;700;800;900&family=Space+Mono:wght@400;700&display=swap");
+.kyl-cats{--char:#14110f;--cream:#f3ece0;--ember:#e8562a;--bean:#3b2418;--latte:#c9a27e;
+  direction:rtl;font-family:"Alexandria","Segoe UI",Tahoma,sans-serif;max-width:1280px;margin:0 auto;padding:70px 20px 30px}
+.kyl-cats *{box-sizing:border-box;margin:0;padding:0}
+.kyl-cats .hd{display:flex;align-items:end;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:34px}
+.kyl-cats .hd h2{font-weight:900;font-size:clamp(2.2rem,4.6vw,3.8rem);line-height:1.1;color:var(--char)}
+.kyl-cats .hd h2 span{color:var(--ember)}
+.kyl-cats .hd p{font-family:"Space Mono",monospace;font-size:.8rem;letter-spacing:.14em;color:#7a6f66;direction:ltr}
+.kyl-cats .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.kyl-cats a.c{position:relative;display:flex;flex-direction:column;justify-content:flex-end;min-height:470px;border-radius:34px;padding:26px;overflow:hidden;isolation:isolate;
+  text-decoration:none;color:var(--cream);border:2px solid var(--char);transition:transform .5s cubic-bezier(.3,1.4,.5,1),box-shadow .5s}
+.kyl-cats a.c:nth-child(1){background:var(--char)}
+.kyl-cats a.c:nth-child(2){background:var(--ember);color:var(--char)}
+.kyl-cats a.c:nth-child(3){background:var(--bean)}
+.kyl-cats a.c:hover{transform:translateY(-10px) rotate(-1.2deg);box-shadow:10px 12px 0 var(--char)}
+.kyl-cats a.c:nth-child(2):hover{transform:translateY(-10px) rotate(1.2deg)}
+/* the photo sits in a big circle that breaks out of the card's top */
+.kyl-cats .orb{position:absolute;top:-12%;left:50%;width:92%;aspect-ratio:1;translate:-50% 0;border-radius:50%;overflow:hidden;z-index:-1;
+  background:radial-gradient(circle at 35% 30%,#6a4330,#2a170f 72%);border:2px solid rgba(243,236,224,.15);transition:transform .7s cubic-bezier(.3,1.4,.5,1)}
+.kyl-cats .orb::before{content:"";position:absolute;inset:0;opacity:.5;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 90 90'%3E%3Cg fill='%23140c08'%3E%3Cellipse cx='22' cy='24' rx='13' ry='18' transform='rotate(-30 22 24)'/%3E%3Cellipse cx='66' cy='62' rx='13' ry='18' transform='rotate(25 66 62)'/%3E%3C/g%3E%3C/svg%3E")}
+.kyl-cats .orb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.kyl-cats .orb img[src=""]{display:none}
+.kyl-cats a.c:hover .orb{transform:scale(1.07) rotate(8deg)}
+.kyl-cats .num{font-family:"Space Mono",monospace;font-weight:700;font-size:.82rem;letter-spacing:.18em;opacity:.75;direction:ltr;text-align:right}
+.kyl-cats h3{font-weight:900;font-size:clamp(1.9rem,2.8vw,2.6rem);line-height:1.15;margin:6px 0 4px}
+.kyl-cats .sub{font-weight:300;font-size:.98rem;opacity:.85}
+.kyl-cats .go{position:absolute;bottom:24px;left:24px;width:56px;height:56px;border-radius:50%;display:grid;place-items:center;background:var(--cream);color:var(--char);transition:.4s}
+.kyl-cats a.c:nth-child(2) .go{background:var(--char);color:var(--cream)}
+.kyl-cats a.c:hover .go{transform:rotate(-45deg) scale(1.08);background:var(--ember);color:#fff}
+.kyl-cats a.c:nth-child(2):hover .go{background:var(--cream);color:var(--char)}
+.kyl-cats .go svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:2}
+/* soft shade under the words so they read over the photo */
+.kyl-cats a.c::after{content:"";position:absolute;inset:auto 0 0 0;height:55%;z-index:-1;background:linear-gradient(transparent,var(--shade,rgba(20,17,15,.92)) 55%)}
+.kyl-cats a.c:nth-child(2){--shade:rgba(232,86,42,.95)}
+.kyl-cats a.c:nth-child(3){--shade:rgba(59,36,24,.95)}
+@media (max-width:860px){
+  .kyl-cats{padding:50px 16px 20px}
+  .kyl-cats .grid{grid-template-columns:1fr;gap:16px}
+  .kyl-cats a.c{min-height:300px;padding:22px}
+  .kyl-cats .orb{top:-20%;left:auto;right:-14%;translate:none;width:72%}
+}
+@media (prefers-reduced-motion:reduce){.kyl-cats *{transition:none !important}}
+</style>
+<div class="hd"><h2>وش مزاجك <span>اليوم؟</span></h2><p>CHOOSE YOUR BREW ●</p></div>
+<div class="grid">
+  <a class="c" href="#"><span class="orb"><img src="assets/cat-1.jpg" alt=""></span><span class="num">01 / FILTER</span><h3>قهوة مختصة</h3><span class="sub">محاصيل مختارة للتقطير</span><span class="go"><svg viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></span></a>
+  <a class="c" href="#"><span class="orb"><img src="assets/cat-2.jpg" alt=""></span><span class="num">02 / ESPRESSO</span><h3>إسبريسو</h3><span class="sub">خلطات بقوام غني</span><span class="go"><svg viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></span></a>
+  <a class="c" href="#"><span class="orb"><img src="assets/cat-3.jpg" alt=""></span><span class="num">03 / TOOLS</span><h3>أدوات التحضير</h3><span class="sub">V60، كيمكس، فلاتر وأباريق</span><span class="go"><svg viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></span></a>
+</div>
+</section>
+
+
+<!-- ============ منتجات (بلوك رائد: سلايدر منتجات) ============ -->
+<section class="s-block s-block--best-offers container" id="new">
+  <div class="s-slider-block__title"><div class="s-slider-block__title-right"><h2>وصل حديثاً ●</h2></div>
+    <div class="s-slider-block__title-left"><a class="s-slider-block__display-all" href="#">عرض الكل</a>
+      <div class="s-slider-block__title-nav"><button class="nx" aria-label="السابق"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button><button class="pv" aria-label="التالي"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button></div></div></div>
+  <div class="rail" id="rail-new"></div>
+</section>
+
+<!-- ============ بلوك HTML في سلة: kylah-roast.html ============ -->
+<!-- =====================================================================
+     كيلة | Roast picker (interactive, pure CSS, works without scripts)
+     Paste into a Salla custom HTML block between two product sliders.
+     One photo of roasted beans (assets/roast.jpg): the banner tints it per
+     roast level, so one image covers all three. Replace each href="#"
+     with the matching category or tag link.
+     ===================================================================== -->
+<section class="kyl-roast" aria-label="اختر درجة التحميص">
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;700;800;900&family=Space+Mono:wght@400;700&display=swap");
+.kyl-roast{--char:#14110f;--cream:#f3ece0;--ember:#e8562a;direction:rtl;font-family:"Alexandria","Segoe UI",Tahoma,sans-serif;max-width:1280px;margin:0 auto;padding:30px 20px}
+.kyl-roast *{box-sizing:border-box;margin:0;padding:0}
+.kyl-roast input{position:absolute;opacity:0;pointer-events:none}
+.kyl-roast .box{--bg:#8a5a3b;--fg:var(--cream);--sub:#ecdcc8;--pos:50%;--f:none;
+  position:relative;overflow:hidden;isolation:isolate;border-radius:40px;border:2px solid var(--char);background:var(--bg);color:var(--fg);
+  display:grid;grid-template-columns:1fr 1.05fr;align-items:center;gap:30px;padding:clamp(28px,4vw,56px);min-height:520px;
+  transition:background .7s ease,color .7s ease}
+#kyl-r1:checked ~ .box{--bg:#e6cfae;--fg:var(--char);--sub:#4a3a2e;--pos:8%;--f:sepia(.35) saturate(.8) brightness(1.45) contrast(.9)}
+#kyl-r2:checked ~ .box{--bg:#8a5a3b;--fg:var(--cream);--sub:#f0e1cd;--pos:50%;--f:none}
+#kyl-r3:checked ~ .box{--bg:#1f130d;--fg:var(--cream);--sub:#cbb9a5;--pos:92%;--f:brightness(.55) contrast(1.3) saturate(.9)}
+/* big outlined level word behind */
+.kyl-roast .ghost{position:absolute;z-index:-1;left:-2%;bottom:-8%;font-weight:900;font-size:clamp(9rem,19vw,17rem);line-height:1;color:transparent;-webkit-text-stroke:2px currentColor;opacity:.12;white-space:nowrap}
+.kyl-roast .ghost span{display:none}
+#kyl-r1:checked ~ .box .ghost .g1,#kyl-r2:checked ~ .box .ghost .g2,#kyl-r3:checked ~ .box .ghost .g3{display:inline}
+/* beans */
+.kyl-roast .vis{position:relative;justify-self:center;width:min(440px,100%);aspect-ratio:1}
+.kyl-roast .orb{position:absolute;inset:0;border-radius:50%;overflow:hidden;border:2px solid var(--char);box-shadow:14px 14px 0 var(--char);
+  background:radial-gradient(circle at 35% 30%,#7a4a30,#2a170f 72%);transition:transform .7s cubic-bezier(.3,1.4,.5,1)}
+.kyl-roast .orb::before{content:"";position:absolute;inset:0;opacity:.6;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='70' height='70' viewBox='0 0 90 90'%3E%3Cg fill='%23140c08'%3E%3Cellipse cx='22' cy='24' rx='13' ry='18' transform='rotate(-30 22 24)'/%3E%3Cellipse cx='66' cy='62' rx='13' ry='18' transform='rotate(25 66 62)'/%3E%3C/g%3E%3C/svg%3E");filter:var(--f);transition:filter .7s}
+.kyl-roast .orb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:var(--f);transition:filter .7s ease,transform 1s ease}
+.kyl-roast .orb img[src=""]{display:none}
+#kyl-r1:checked ~ .box .orb{transform:rotate(-8deg)}#kyl-r3:checked ~ .box .orb{transform:rotate(8deg)}
+.kyl-roast .tag{position:absolute;top:6%;left:-2%;background:var(--ember);color:#fff;font-family:"Space Mono",monospace;font-weight:700;font-size:.78rem;letter-spacing:.12em;
+  padding:10px 16px;border-radius:99px;border:2px solid var(--char);transform:rotate(-8deg);direction:ltr}
+/* copy */
+.kyl-roast .txt{display:grid;gap:18px;justify-items:start}
+.kyl-roast .eye{font-family:"Space Mono",monospace;font-size:.78rem;letter-spacing:.18em;direction:ltr;opacity:.8}
+.kyl-roast h2{font-weight:900;font-size:clamp(2.2rem,4vw,3.4rem);line-height:1.15}
+.kyl-roast .pick{display:flex;gap:8px;flex-wrap:wrap}
+.kyl-roast label{cursor:pointer;padding:12px 24px;border-radius:99px;border:2px solid currentColor;font-weight:700;font-size:.95rem;transition:.3s;user-select:none}
+.kyl-roast label:hover{transform:translateY(-2px)}
+#kyl-r1:checked ~ .box label[for=kyl-r1],#kyl-r2:checked ~ .box label[for=kyl-r2],#kyl-r3:checked ~ .box label[for=kyl-r3]{background:var(--char);border-color:var(--char);color:var(--cream)}
+#kyl-r3:checked ~ .box label[for=kyl-r3]{background:var(--ember);border-color:var(--ember)}
+.kyl-roast input:focus-visible ~ .box .pick{outline:2px dashed var(--ember);outline-offset:6px;border-radius:99px}
+/* the roast scale */
+.kyl-roast .scale{position:relative;width:100%;max-width:440px;height:14px;border-radius:99px;border:2px solid var(--char);
+  background:linear-gradient(to left,#e9cfa6,#b77a4a 50%,#2a170f)}
+.kyl-roast .knob{position:absolute;top:50%;right:var(--pos);width:30px;height:30px;border-radius:50%;background:var(--cream);border:3px solid var(--char);
+  translate:50% -50%;transition:right .7s cubic-bezier(.3,1.5,.5,1);box-shadow:0 0 0 6px rgba(232,86,42,.35)}
+.kyl-roast .ends{display:flex;justify-content:space-between;width:100%;max-width:440px;font-family:"Space Mono",monospace;font-size:.7rem;letter-spacing:.14em;opacity:.7;margin-top:-8px}
+.kyl-roast .note{display:none;gap:12px;max-width:440px}
+#kyl-r1:checked ~ .box .n1,#kyl-r2:checked ~ .box .n2,#kyl-r3:checked ~ .box .n3{display:grid;animation:kylIn .6s ease}
+@keyframes kylIn{from{opacity:0;transform:translateY(12px)}}
+.kyl-roast .note p{font-weight:300;font-size:1.08rem;line-height:1.85;color:var(--sub)}
+.kyl-roast .chips{display:flex;gap:8px;flex-wrap:wrap}
+.kyl-roast .chips span{font-size:.82rem;font-weight:700;padding:6px 14px;border-radius:99px;background:rgba(255,255,255,.14);border:1.5px solid currentColor}
+.kyl-roast .btn{justify-self:start;display:inline-flex;align-items:center;gap:12px;margin-top:4px;padding:14px 28px;border-radius:99px;background:var(--char);color:var(--cream) !important;
+  font-weight:700;text-decoration:none;border:2px solid var(--char);transition:.3s}
+.kyl-roast .btn:hover{background:var(--ember);border-color:var(--ember);transform:translateY(-2px)}
+.kyl-roast .btn svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:2}
+@media (max-width:860px){
+  .kyl-roast{padding:20px 16px}
+  .kyl-roast .box{grid-template-columns:1fr;border-radius:30px;gap:26px;padding:26px 22px 34px}
+  .kyl-roast .vis{width:min(280px,80%)}
+  .kyl-roast h2{font-size:2.1rem}
+  .kyl-roast label{padding:10px 18px;font-size:.9rem}
+}
+@media (prefers-reduced-motion:reduce){.kyl-roast *{transition:none !important;animation:none !important}}
+</style>
+<input type="radio" name="kyl-roast" id="kyl-r1"><input type="radio" name="kyl-roast" id="kyl-r2" checked><input type="radio" name="kyl-roast" id="kyl-r3">
+<div class="box">
+  <div class="ghost" aria-hidden="true"><span class="g1">LIGHT</span><span class="g2">MEDIUM</span><span class="g3">DARK</span></div>
+  <div class="vis"><div class="orb"><img src="assets/roast.jpg" alt="حبوب قهوة محمصة"></div><span class="tag">ROAST LEVEL</span></div>
+  <div class="txt">
+    <span class="eye">FIND YOUR ROAST ●</span>
+    <h2>اختر درجة تحميصك</h2>
+    <div class="pick" role="group" aria-label="درجة التحميص"><label for="kyl-r1">فاتح</label><label for="kyl-r2">متوسط</label><label for="kyl-r3">غامق</label></div>
+    <div class="scale" aria-hidden="true"><span class="knob"></span></div>
+    <div class="ends" aria-hidden="true"><span>DARK</span><span>LIGHT</span></div>
+    <div class="note n1"><p>حموضة مشرقة ونكهات فواكه وزهور. أنسب للتقطير بالـV60 والكيمكس.</p><div class="chips"><span>فواكه</span><span>زهور</span><span>حمضيات</span></div><a class="btn" href="#">تسوّق التحميص الفاتح <svg viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></a></div>
+    <div class="note n2"><p>توازن بين الحلاوة والحموضة، بنكهات شوكولاتة ومكسرات. يمشي مع كل طرق التحضير.</p><div class="chips"><span>شوكولاتة</span><span>مكسرات</span><span>كراميل</span></div><a class="btn" href="#">تسوّق التحميص المتوسط <svg viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></a></div>
+    <div class="note n3"><p>قوام ثقيل ومرارة لطيفة بنكهة كاكاو. ممتاز للإسبريسو والقهوة بالحليب.</p><div class="chips"><span>كاكاو</span><span>قوام ثقيل</span><span>مع الحليب</span></div><a class="btn" href="#">تسوّق التحميص الغامق <svg viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></a></div>
+  </div>
+</div>
+</section>
+
+
+<section class="s-block s-block--best-offers container" id="best">
+  <div class="s-slider-block__title"><div class="s-slider-block__title-right"><h2>الأكثر مبيعاً ●</h2></div>
+    <div class="s-slider-block__title-left"><a class="s-slider-block__display-all" href="#">عرض الكل</a>
+      <div class="s-slider-block__title-nav"><button class="nx" aria-label="السابق"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button><button class="pv" aria-label="التالي"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button></div></div></div>
+  <div class="rail" id="rail-tools"></div>
+</section>
+
+<!-- ============ بلوك HTML في سلة: kylah-story.html ============ -->
+<!-- =====================================================================
+     كيلة | Story banner: from the bean to the cup
+     Paste into a Salla custom HTML block. Replace assets/story.jpg (a tall
+     photo of the roaster or beans pouring) with its Salla link.
+     ===================================================================== -->
+<section class="kyl-story" aria-label="قصة كيلة">
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;700;800;900&family=Space+Mono:wght@400;700&display=swap");
+.kyl-story{--char:#14110f;--cream:#f3ece0;--ember:#e8562a;--latte:#c9a27e;direction:rtl;font-family:"Alexandria","Segoe UI",Tahoma,sans-serif;max-width:1280px;margin:0 auto;padding:30px 20px}
+.kyl-story *{box-sizing:border-box;margin:0;padding:0}
+.kyl-story .box{position:relative;overflow:hidden;isolation:isolate;border-radius:40px;background:var(--char);color:var(--cream);
+  display:grid;grid-template-columns:1.1fr .9fr;min-height:560px;border:2px solid var(--char)}
+.kyl-story .txt{padding:clamp(30px,5vw,70px);display:grid;gap:22px;align-content:center}
+.kyl-story .eye{font-family:"Space Mono",monospace;font-size:.78rem;letter-spacing:.18em;color:var(--latte);direction:ltr;justify-self:start}
+.kyl-story h2{font-weight:900;font-size:clamp(2.4rem,4.6vw,4rem);line-height:1.12}
+.kyl-story h2 em{font-style:normal;color:var(--ember)}
+.kyl-story p.lead{font-weight:300;font-size:1.1rem;line-height:1.9;color:#cfc4b4;max-width:32em}
+/* three steps joined by a line that a dot keeps travelling along */
+.kyl-story ol{list-style:none;position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:10px}
+.kyl-story ol::before{content:"";position:absolute;top:27px;right:10%;left:10%;border-top:2px dashed rgba(243,236,224,.3)}
+.kyl-story ol::after{content:"";position:absolute;top:21px;right:10%;width:14px;height:14px;border-radius:50%;background:var(--ember);box-shadow:0 0 16px var(--ember);animation:kylTravel 5s ease-in-out infinite}
+@keyframes kylTravel{0%{right:10%}45%,55%{right:calc(90% - 14px)}100%{right:10%}}
+.kyl-story li{position:relative;display:grid;justify-items:center;text-align:center;gap:10px}
+.kyl-story li b{width:56px;height:56px;border-radius:50%;display:grid;place-items:center;background:var(--cream);color:var(--char);font-weight:900;font-size:1.3rem;position:relative;z-index:1;transition:.4s}
+.kyl-story li:hover b{background:var(--ember);color:#fff;transform:scale(1.1)}
+.kyl-story li strong{font-weight:800;font-size:1.05rem}
+.kyl-story li span{font-weight:300;font-size:.88rem;color:#b8ad9e;line-height:1.6}
+.kyl-story .btn{justify-self:start;display:inline-flex;align-items:center;gap:12px;padding:14px 28px;border-radius:99px;border:2px solid var(--cream);color:var(--cream) !important;font-weight:700;text-decoration:none;transition:.3s}
+.kyl-story .btn:hover{background:var(--cream);color:var(--char) !important}
+.kyl-story .btn svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:2}
+.kyl-story .pic{position:relative;overflow:hidden;background:radial-gradient(circle at 40% 30%,#6a4330,#2a170f 75%)}
+.kyl-story .pic::before{content:"";position:absolute;inset:0;opacity:.5;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 90 90'%3E%3Cg fill='%23140c08'%3E%3Cellipse cx='22' cy='24' rx='13' ry='18' transform='rotate(-30 22 24)'/%3E%3Cellipse cx='66' cy='62' rx='13' ry='18' transform='rotate(25 66 62)'/%3E%3C/g%3E%3C/svg%3E")}
+.kyl-story .pic img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1.2s ease}
+.kyl-story .pic img[src=""]{display:none}
+.kyl-story .box:hover .pic img{transform:scale(1.05)}
+/* a curved edge where the photo meets the dark side */
+.kyl-story .pic::after{content:"";position:absolute;top:-5%;bottom:-5%;right:-70px;width:140px;border-radius:50%;background:var(--char)}
+.kyl-story .stamp{position:absolute;z-index:2;bottom:30px;left:30px;width:120px;height:120px;border-radius:50%;background:var(--ember);color:var(--char);display:grid;place-items:center;border:2px solid var(--char)}
+.kyl-story .stamp svg{direction:ltr;position:absolute;inset:8px;width:calc(100% - 16px);height:calc(100% - 16px);animation:kylSpin 18s linear infinite;overflow:visible}
+.kyl-story .stamp text{font-family:"Space Mono",monospace;font-weight:700;font-size:9px;fill:var(--char)}
+.kyl-story .stamp i{width:22px;height:22px;border-radius:50%;background:var(--char)}
+@keyframes kylSpin{to{transform:rotate(360deg)}}
+@media (max-width:860px){
+  .kyl-story{padding:20px 16px}
+  .kyl-story .box{grid-template-columns:1fr;border-radius:30px}
+  .kyl-story .pic{order:-1;min-height:280px}
+  .kyl-story .pic::after{top:auto;right:-5%;left:-5%;bottom:-60px;width:auto;height:120px}
+  .kyl-story .stamp{width:96px;height:96px;bottom:auto;top:20px;left:20px}
+  .kyl-story ol{grid-template-columns:1fr;gap:16px}
+  .kyl-story ol::before,.kyl-story ol::after{display:none}
+  .kyl-story li{grid-template-columns:auto 1fr;justify-items:start;text-align:start;column-gap:14px}
+  .kyl-story li b{grid-row:span 2}
+}
+@media (prefers-reduced-motion:reduce){.kyl-story *,.kyl-story *::before,.kyl-story *::after{animation:none !important;transition:none !important}}
+</style>
+<div class="box">
+  <div class="txt">
+    <span class="eye">FROM BEAN TO CUP ●</span>
+    <h2>من الحبة<br><em>لين الكوب.</em></h2>
+    <p class="lead">كيلة ليست مجرد محمصة. نهتم بجودة الحبوب من أول ما نختارها لين ما نعبّيها، عشان كل كوب يطلع مثل ما تحب.</p>
+    <ol>
+      <li><b>١</b><strong>نختار الحبة</strong><span>محاصيل مختصة بعناية</span></li>
+      <li><b>٢</b><strong>نحمّصها بإتقان</strong><span>لكل محصول درجته</span></li>
+      <li><b>٣</b><strong>نعبّيها طازجة</strong><span>وتوصلك محافظة على نكهتها</span></li>
+    </ol>
+    <a class="btn" href="#">اعرف قصتنا <svg viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></a>
+  </div>
+  <div class="pic"><img src="assets/story.jpg" alt="">
+    <div class="stamp" aria-hidden="true"><svg viewBox="0 0 100 100"><defs><path id="kyl-st" d="M50 50m-40 0a40 40 0 1 1 80 0a40 40 0 1 1-80 0"/></defs><text><textPath href="#kyl-st" textLength="248" lengthAdjust="spacing">KYLAH ROASTERY ● FRESHLY ROASTED ●</textPath></text></svg><i></i></div>
+  </div>
+</div>
+</section>
+
+
+<!-- ============ بلوك HTML في سلة: kylah-sip.html ============ -->
+<!-- =====================================================================
+     كيلة | Closing banner: "كي تشعر بالسعادة مع كل رشفة"
+     Paste into a Salla custom HTML block near the end of the home page.
+     Replace assets/sip.jpg (square, a coffee cup seen from above) with its
+     Salla link, and href="#" with the shop link.
+     ===================================================================== -->
+<section class="kyl-sip" aria-label="كيلة">
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;700;800;900&family=Space+Mono:wght@400;700&display=swap");
+.kyl-sip{--char:#14110f;--cream:#f3ece0;--ember:#e8562a;direction:rtl;font-family:"Alexandria","Segoe UI",Tahoma,sans-serif;max-width:1280px;margin:0 auto;padding:30px 20px 70px}
+.kyl-sip *{box-sizing:border-box;margin:0;padding:0}
+.kyl-sip .box{position:relative;overflow:hidden;isolation:isolate;border-radius:40px;background:var(--ember);color:var(--char);border:2px solid var(--char);
+  display:grid;grid-template-columns:1fr auto;align-items:center;gap:40px;padding:clamp(30px,5vw,70px);min-height:460px}
+/* big rotating type circle in the background */
+.kyl-sip .bgring{direction:ltr;position:absolute;z-index:-1;width:900px;height:900px;left:-260px;top:50%;translate:0 -50%;animation:kylSpin 60s linear infinite;opacity:.16}
+.kyl-sip .bgring text{font-weight:900;font-size:13px;fill:var(--char)}
+@keyframes kylSpin{to{transform:rotate(360deg)}}
+.kyl-sip h2{font-weight:900;font-size:clamp(2.6rem,5.6vw,5.2rem);line-height:1.08;letter-spacing:-.01em}
+.kyl-sip h2 span{display:block;color:var(--cream);-webkit-text-stroke:2px var(--char);paint-order:stroke fill}
+.kyl-sip p{font-weight:400;font-size:1.12rem;line-height:1.85;margin:16px 0 26px;max-width:28em}
+.kyl-sip .btn{display:inline-flex;align-items:center;gap:12px;padding:16px 32px;border-radius:99px;background:var(--char);color:var(--cream) !important;font-weight:700;text-decoration:none;
+  box-shadow:6px 6px 0 var(--cream);border:2px solid var(--char);transition:.3s}
+.kyl-sip .btn:hover{transform:translate(-3px,-3px);box-shadow:9px 9px 0 var(--cream)}
+.kyl-sip .btn svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:2}
+.kyl-sip .cup{position:relative;width:min(380px,32vw);aspect-ratio:1}
+.kyl-sip .orb{position:absolute;inset:0;border-radius:50%;overflow:hidden;border:2px solid var(--char);box-shadow:12px 12px 0 var(--char);
+  background:radial-gradient(circle,#2a170f 30%,#5a3624 31%,#5a3624 46%,var(--cream) 47%,var(--cream) 62%,#e9dfcf 63%)}
+.kyl-sip .orb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;animation:kylSpin 40s linear infinite}
+.kyl-sip .orb img[src=""]{display:none}
+.kyl-sip .steam{position:absolute;left:50%;top:-24%;width:40%;translate:-50% 0;overflow:visible}
+.kyl-sip .steam path{fill:none;stroke:var(--char);stroke-width:2.6;stroke-linecap:round;stroke-dasharray:60;stroke-dashoffset:60;animation:kylSteam 4.2s ease-in-out infinite}
+.kyl-sip .steam path:nth-child(2){animation-delay:1.3s}.kyl-sip .steam path:nth-child(3){animation-delay:2.6s}
+@keyframes kylSteam{0%{stroke-dashoffset:60;opacity:0;transform:translateY(14px)}35%{opacity:1}100%{stroke-dashoffset:-60;opacity:0;transform:translateY(-16px)}}
+.kyl-sip .dots{position:absolute;bottom:-4%;right:-6%;display:flex;gap:8px}
+.kyl-sip .dots i{width:44px;height:44px;border-radius:50%;background:var(--char);animation:kylBob 3.6s ease-in-out infinite}
+.kyl-sip .dots i+i{width:30px;height:30px;align-self:end;background:var(--cream);border:2px solid var(--char);animation-delay:-1.2s}
+@keyframes kylBob{50%{transform:translateY(-10px)}}
+@media (max-width:860px){
+  .kyl-sip{padding:20px 16px 50px}
+  .kyl-sip .box{grid-template-columns:1fr;text-align:center;justify-items:center;border-radius:30px;gap:30px;padding:46px 22px 40px}
+  .kyl-sip .cup{order:-1;width:min(240px,66vw);margin-top:20px}
+  .kyl-sip p{margin-inline:auto}
+  .kyl-sip h2{font-size:2.5rem}
+  .kyl-sip .bgring{width:620px;height:620px;left:50%;translate:-50% -50%}
+}
+@media (prefers-reduced-motion:reduce){.kyl-sip *{animation:none !important;transition:none !important}}
+</style>
+<div class="box">
+  <svg class="bgring" viewBox="0 0 300 300" aria-hidden="true"><defs><path id="kyl-bg" d="M150 150m-120 0a120 120 0 1 1 240 0a120 120 0 1 1-240 0"/></defs><text><textPath href="#kyl-bg" textLength="750" lengthAdjust="spacing">كيلة ● قهوة مختصة ● كيلة ● محمصة ● كيلة ● قهوة مختصة ● كيلة ● محمصة ●</textPath></text></svg>
+  <div>
+    <h2>كي تشعر بالسعادة <span>مع كل رشفة</span></h2>
+    <p>قهوة مختصة طازجة بأسعار مناسبة للكل، من محمصة كيلة لين بابك.</p>
+    <a class="btn" href="#">اطلب قهوتك الحين <svg viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></a>
+  </div>
+  <div class="cup" aria-hidden="true">
+    <svg class="steam" viewBox="0 0 60 50"><path d="M14 46c-6-8 6-12 0-20s6-12 0-20"/><path d="M30 46c-6-8 6-12 0-20s6-12 0-20"/><path d="M46 46c-6-8 6-12 0-20s6-12 0-20"/></svg>
+    <div class="orb"><img src="assets/sip.jpg" alt=""></div>
+    <div class="dots"><i></i><i></i></div>
+  </div>
+</div>
+</section>
+
+</main>
+
+<!-- ============ فوتر رائد (يتنسّق من kylah-raed.css) ============ -->
+<footer class="store-footer">
+  <div class="store-footer__inner"><div class="container">
+    <div><img class="f-logo" src="assets/logo.png" alt="كيلة"><p>كيلة ليست مجرد محمصة. نهتم بجودة الحبوب من اختيارها لين تعبئتها، كي تشعر بالسعادة مع كل رشفة.</p></div>
+    <div><h3>روابط مهمة</h3><ul><li><a href="#">من نحن</a></li><li><a href="#">سياسة الاستبدال والاسترجاع</a></li><li><a href="#">الشروط والأحكام</a></li></ul></div>
+    <div><h3>الأقسام</h3><ul><li><a href="#">قهوة مختصة</a></li><li><a href="#">إسبريسو</a></li><li><a href="#">أدوات التحضير</a></li></ul></div>
+    <div><h3>تواصل معنا</h3><ul><li><a href="#">واتساب</a></li><li><a href="#">Instagram</a></li><li><a href="#">TikTok</a></li></ul></div>
+  </div></div>
+  <div class="container f-bottom"><span class="copyright-text">© 2026 كيلة · صنع بإتقان على منصة سلة</span><span class="pay"><span>مدى</span><span>VISA</span><span>Mastercard</span><span>Apple Pay</span></span></div>
+</footer>
+
+<script>
+/* product cards in Raed's own markup. Names and prices are samples. */
+const bag=(c1,c2,label)=>"data:image/svg+xml,"+encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400"><rect width="400" height="400" fill="#ebe1d1"/><circle cx="200" cy="215" r="150" fill="${c2}" opacity=".35"/><path d="M128 110h144l18 230H110z" fill="${c1}" stroke="#14110f" stroke-width="5" stroke-linejoin="round"/><path d="M128 110l14-26h116l14 26" fill="${c1}" stroke="#14110f" stroke-width="5" stroke-linejoin="round"/><rect x="146" y="170" width="108" height="110" rx="10" fill="#f3ece0" stroke="#14110f" stroke-width="4"/><circle cx="200" cy="205" r="14" fill="#14110f"/><circle cx="222" cy="214" r="7" fill="#e8562a"/><text x="200" y="258" font-family="monospace" font-size="15" font-weight="700" text-anchor="middle" fill="#14110f">${label}</text></svg>`);
+const tool=(shape)=>"data:image/svg+xml,"+encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400"><rect width="400" height="400" fill="#ebe1d1"/><circle cx="200" cy="210" r="150" fill="#c9a27e" opacity=".35"/>${shape}</svg>`);
+const S='stroke="#14110f" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"';
+const fresh=[
+ {n:"إندونيسي، قهوة مختصة 250 جم",p:79,img:"assets/p3.jpg"},
+ {n:"باشن فروت، قهوة مختصة 250 جم",p:85,img:"assets/p2.jpg"},
+ {n:"كولومبيا هويلا، تحميص متوسط 250 جم",p:72,img:"assets/p1.jpg"},
+ {n:"خلطة كيلة للإسبريسو 1 كجم",p:189,promo:"الأكثر مبيعاً",img:"assets/p4.jpg"},
+ {n:"البرازيل سانتوس، تحميص متوسط 250 جم",p:59,o:69,img:"assets/p1.jpg"},
+ {n:"إثيوبيا جوجي، تحميص فاتح 250 جم",p:84,out:1,img:"assets/p2.jpg"}
+];
+const tools=[
+ {n:"إثيوبيا يرقاتشيفي، تحميص فاتح 250 جم",p:79,img:"assets/p4.jpg"},
+ {n:"إندونيسي، قهوة مختصة 500 جم",p:149,img:"assets/p3.jpg"},
+ {n:"قهوة كيلة اليومية 500 جم",p:95,promo:"وفّر أكثر",img:"assets/p1.jpg"},
+ {n:"باشن فروت، قهوة مختصة 500 جم",p:159,o:175,img:"assets/p2.jpg"},
+ {n:"خلطة كيلة للإسبريسو 500 جم",p:99,img:"assets/p4.jpg"},
+ {n:"كولومبيا هويلا، تحميص متوسط 500 جم",p:135,img:"assets/p3.jpg"}
+];
+const AR="٠١٢٣٤٥٦٧٨٩",num=v=>String(v).replace(/\d/g,d=>AR[d])+" ر.س";
+const card=x=>`<div class="s-product-card-entry s-product-card-vertical${x.out?" s-product-card-out-of-stock":""}">
+ <div class="s-product-card-image"><a href="#" aria-label="${x.n}"><img class="s-product-card-image-cover" src="${x.img}" alt="${x.n}"></a>${x.promo?`<div class="s-product-card-promotion-title">${x.promo}</div>`:""}
+  <salla-button class="s-product-card-wishlist-btn"><button aria-label="أضف للمفضلة"><svg viewBox="0 0 24 24"><use href="#i-heart"/></svg></button></salla-button></div>
+ <div class="s-product-card-content"><h3 class="s-product-card-content-title"><a href="#">${x.n}</a></h3>
+  <div class="s-product-card-content-sub">${x.o?`<div class="s-product-card-sale-price"><h4>${num(x.p)}</h4><span>${num(x.o)}</span></div>`:`<h4 class="s-product-card-price">${num(x.p)}</h4>`}</div>
+  <div class="s-product-card-content-footer"><salla-add-product-button>${x.out?`<button disabled>نفدت الكمية</button>`:`<button><svg viewBox="0 0 24 24"><use href="#i-bag"/></svg>أضف للسلة</button>`}</salla-add-product-button></div></div></div>`;
+document.getElementById("rail-new").innerHTML=fresh.map(card).join("");
+document.getElementById("rail-tools").innerHTML=tools.map(card).join("");
+/* Raed's products slider autoplays; emulated here */
+const calm=matchMedia("(prefers-reduced-motion:reduce)").matches;
+document.querySelectorAll(".s-block--best-offers").forEach((b,ix)=>{const r=b.querySelector(".rail");let hold=false,t;
+ const step=()=>r.firstElementChild.getBoundingClientRect().width+parseFloat(getComputedStyle(r).columnGap||0);
+ const atEnd=()=>Math.abs(r.scrollLeft)+r.clientWidth>=r.scrollWidth-6;
+ const go=d=>{if(d>0&&atEnd())r.scrollTo({left:0,behavior:"smooth"});else r.scrollBy({left:-d*step(),behavior:"smooth"})};
+ b.querySelector(".pv").addEventListener("click",()=>go(1));b.querySelector(".nx").addEventListener("click",()=>go(-1));
+ ["pointerenter","touchstart","focusin"].forEach(e=>r.addEventListener(e,()=>{hold=true;clearTimeout(t)},{passive:true}));
+ ["pointerleave","touchend","focusout"].forEach(e=>r.addEventListener(e,()=>{clearTimeout(t);t=setTimeout(()=>hold=false,2500)},{passive:true}));
+ if(!calm)setTimeout(()=>setInterval(()=>{if(!hold&&r.scrollWidth>r.clientWidth+4)go(1)},3600),ix*1300)});
+</script>
+</body>
+</html>

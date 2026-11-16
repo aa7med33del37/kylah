@@ -1,0 +1,99 @@
+/* =====================================================================
+   كيلة | Kylah Roastery, Raed theme restyle
+   Paste into: Salla dashboard > Store design > Custom CSS.
+   Restyles Raed's own blocks (header, store features, products sliders,
+   product card, footer) by their real classes from theme-raed.
+   No HTML changes needed.
+   ===================================================================== */
+@import url("https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;500;700;800;900&family=Space+Mono:wght@400;700&display=swap");
+
+:root{
+  --ky-char:#14110f; --ky-ink:#030706; --ky-cream:#f3ece0; --ky-paper:#fbf7f0;
+  --ky-bean:#3b2418; --ky-latte:#c9a27e; --ky-ember:#e8562a; --ky-mute:#7a6f66;
+  --ky-line:rgba(20,17,15,.12);
+  --ky-f:"Alexandria","Segoe UI",Tahoma,sans-serif; --ky-mono:"Space Mono",ui-monospace,monospace;
+}
+body{background:var(--ky-cream);font-family:var(--ky-f)}
+
+/* ============ HEADER ============ */
+.store-header{font-family:var(--ky-f)}
+.store-header .top-navbar{background:var(--ky-char) !important;color:#e9e0d2 !important;min-height:40px}
+.store-header .top-navbar a{color:inherit}
+.store-header .topnav-link-item{font-size:.8rem;border-color:rgba(255,255,255,.14) !important}
+.store-header .topnav-link-item:hover{color:var(--ky-ember)}
+.store-header .top-navbar .s-search-input{background:rgba(255,255,255,.07) !important;color:#f3ece0 !important;border:1px solid rgba(255,255,255,.12) !important;border-radius:99px}
+.store-header .top-navbar .s-search-input:focus{border-color:var(--ky-ember) !important}
+.store-header .main-nav-container,.store-header .main-nav-container .inner{background:var(--ky-cream) !important}
+.store-header .main-nav-container{box-shadow:none !important;border-bottom:2px solid var(--ky-char)}
+.store-header .main-nav-container.fixed-pinned .inner{background:rgba(243,236,224,.9) !important;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.store-header .navbar-brand img{max-height:58px;width:auto;transition:transform .4s}
+.store-header .navbar-brand:hover img{transform:rotate(-3deg) scale(1.04)}
+@media (min-width:1024px){
+  .store-header .main-menu li.root-level > a{font-weight:700 !important;color:var(--ky-char) !important;position:relative}
+  /* the logo's round dot slides under the hovered item */
+  .store-header .main-menu li.root-level > a > span{position:relative}
+  .store-header .main-menu li.root-level > a > span::before{content:"";position:absolute;left:50%;bottom:-12px;width:8px;height:8px;border-radius:50%;
+    background:var(--ky-ember);transform:translateX(-50%) scale(0);transition:transform .35s cubic-bezier(.3,1.6,.5,1)}
+  .store-header .main-menu li.root-level:hover > a > span::before{transform:translateX(-50%) scale(1)}
+  .store-header .main-menu .sub-menu{background:var(--ky-char) !important;border-radius:18px !important;overflow:hidden;box-shadow:0 30px 50px -24px rgba(0,0,0,.6) !important}
+  .store-header .main-menu .sub-menu a{color:#e9e0d2 !important}
+  .store-header .main-menu .has-children li a:hover{background:var(--ky-ember) !important;color:#fff !important}
+}
+.store-header .main-menu > li > a[href*="offer"]{color:var(--ky-ember) !important}
+.store-header salla-user-menu button,.store-header salla-cart-summary button,.store-header salla-cart-summary a{border:2px solid var(--ky-char) !important;background:transparent !important;transition:background .3s,color .3s}
+.store-header salla-user-menu button:hover,.store-header salla-cart-summary button:hover{background:var(--ky-char) !important;color:var(--ky-cream) !important}
+.store-header .s-cart-summary-count{background:var(--ky-ember) !important;color:#fff !important}
+
+/* ============ STORE FEATURES ============ */
+.s-block--features .s-block--features__item{background:var(--ky-paper);border:2px solid var(--ky-char);border-radius:26px;padding:26px 18px;text-align:center;
+  transition:transform .4s cubic-bezier(.3,1.4,.5,1),box-shadow .4s}
+.s-block--features .s-block--features__item:hover{transform:translateY(-6px) rotate(-1deg);box-shadow:8px 8px 0 var(--ky-char)}
+.s-block--features .feature-icon{background:var(--ky-char) !important;width:64px;height:64px;margin-inline:auto;position:relative}
+.s-block--features .feature-icon::after{content:"";position:absolute;top:2px;inset-inline-end:2px;width:14px;height:14px;border-radius:50%;background:var(--ky-ember);border:3px solid var(--ky-paper)}
+.s-block--features .feature-icon i{color:var(--ky-cream) !important}
+.s-block--features h2{font-family:var(--ky-f);font-weight:800;font-size:1.05rem;color:var(--ky-char)}
+.s-block--features p{color:var(--ky-mute);font-size:.88rem}
+
+/* ============ PRODUCTS SLIDER HEADING ============ */
+.s-block--best-offers .s-slider-block__title h2{font-family:var(--ky-f);font-weight:900;font-size:clamp(1.8rem,3.4vw,2.8rem);color:var(--ky-char);letter-spacing:-.01em}
+.s-block--best-offers .s-slider-block__display-all{font-family:var(--ky-mono);font-size:.82rem;color:var(--ky-char);border-bottom:2px solid var(--ky-ember);padding-bottom:2px}
+.s-block--best-offers .s-slider-block__title-nav button{border:2px solid var(--ky-char) !important;background:var(--ky-cream) !important;color:var(--ky-char) !important;box-shadow:none !important}
+.s-block--best-offers .s-slider-block__title-nav button:hover{background:var(--ky-char) !important;color:var(--ky-cream) !important}
+
+/* ============ PRODUCT CARD ============ */
+.s-product-card-entry{background:var(--ky-paper) !important;border:2px solid var(--ky-char);border-radius:26px !important;overflow:hidden;font-family:var(--ky-f);
+  transition:transform .45s cubic-bezier(.3,1.4,.5,1),box-shadow .45s}
+.s-product-card-entry:hover{transform:translateY(-6px);box-shadow:8px 8px 0 var(--ky-char)}
+.s-product-card-vertical .s-product-card-image{flex:none !important;aspect-ratio:1;height:auto !important;background:#ebe1d1;border-radius:0 !important;border-bottom:2px solid var(--ky-char)}
+.s-product-card-vertical .s-product-card-image > a{display:block;height:100%}
+.s-product-card-vertical .s-product-card-image img{height:100% !important;width:100% !important;object-fit:cover !important;transition:transform .7s cubic-bezier(.3,1.4,.5,1)}
+.s-product-card-entry:hover .s-product-card-image img{transform:scale(1.07) rotate(-3deg)}
+.s-product-card-entry .s-product-card-wishlist-btn{opacity:1 !important;top:12px !important}
+.s-product-card-entry .s-product-card-wishlist-btn button{width:38px;height:38px;border-radius:50% !important;background:var(--ky-paper) !important;color:var(--ky-char) !important;border:2px solid var(--ky-char) !important}
+.s-product-card-entry .s-product-card-wishlist-btn button:hover,.s-product-card-entry .s-product-card-wishlist-added button{background:var(--ky-ember) !important;color:#fff !important;border-color:var(--ky-ember) !important}
+.s-product-card-entry .s-product-card-promotion-title{background:var(--ky-ember);color:#fff;font-weight:700;border-radius:99px !important;padding:6px 14px;top:14px;margin-inline-start:12px}
+.s-product-card-entry .s-product-card-content{padding:16px 16px 18px}
+.s-product-card-entry .s-product-card-content-title a{font-weight:700;font-size:1rem;color:var(--ky-char);line-height:1.55;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.s-product-card-entry .s-product-card-content-sub{margin-bottom:14px}
+.s-product-card-entry .s-product-card-price,.s-product-card-entry .s-product-card-sale-price h4{font-weight:900;font-size:1.15rem;color:var(--ky-char)}
+.s-product-card-entry .s-product-card-sale-price span{color:var(--ky-mute)}
+.s-product-card-entry .s-product-card-content-footer button{height:46px;border-radius:99px !important;border:2px solid var(--ky-char) !important;background:var(--ky-char) !important;color:var(--ky-cream) !important;
+  font-family:var(--ky-f);font-weight:700;transition:background .3s,border-color .3s,transform .3s}
+.s-product-card-entry .s-product-card-content-footer button:not([disabled]):hover{background:var(--ky-ember) !important;border-color:var(--ky-ember) !important;transform:scale(1.02)}
+.s-product-card-out-of-stock .s-product-card-image img{filter:grayscale(.8);opacity:.6}
+.s-product-card-entry .s-product-card-content-footer button[disabled]{background:transparent !important;color:var(--ky-mute) !important;border-style:dashed !important}
+
+/* ============ FOOTER ============ */
+.store-footer{background:var(--ky-char) !important;color:#d8cfc2;font-family:var(--ky-f);border-top:6px solid var(--ky-ember)}
+.store-footer .store-footer__inner{background:transparent !important}
+.store-footer h3,.store-footer h4{color:var(--ky-cream) !important;font-weight:800}
+.store-footer a:hover{color:var(--ky-ember) !important}
+.store-footer .copyright-text{font-family:var(--ky-mono);font-size:.78rem;opacity:.7}
+
+@media (max-width:720px){
+  .s-product-card-entry{border-radius:20px !important}
+  .s-product-card-entry .s-product-card-content{padding:12px}
+  .s-product-card-entry .s-product-card-content-title a{font-size:.9rem}
+  .s-product-card-entry .s-product-card-content-footer button{height:40px;font-size:.84rem}
+}
+@media (prefers-reduced-motion:reduce){.s-product-card-entry,.s-product-card-entry *,.s-block--features__item{transition:none !important}}
